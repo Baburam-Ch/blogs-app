@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Blog App</title>
+    <link href="{% static 'blogs/css/style.css' %}" rel="stylesheet">
+  <head>
+  <body>
+    <header>
+      <h1><a href="{% url 'blogs:home' %}">Django blog</a></h1>
+    </header>
+    <hr/>
+    <div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+</html>
